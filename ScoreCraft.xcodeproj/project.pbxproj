@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7347BC1E2A4F73DF00DAE511 /* ScoreCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347BC1D2A4F73DF00DAE511 /* ScoreCraftApp.swift */; };
+		7347BC202A4F73DF00DAE511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347BC1F2A4F73DF00DAE511 /* ContentView.swift */; };
+		7347BC222A4F73E200DAE511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7347BC212A4F73E200DAE511 /* Assets.xcassets */; };
+		7347BC252A4F73E200DAE511 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7347BC242A4F73E200DAE511 /* Preview Assets.xcassets */; };
+		7347BC2F2A4F73E200DAE511 /* ScoreCraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347BC2E2A4F73E200DAE511 /* ScoreCraftTests.swift */; };
+		7347BC392A4F73E200DAE511 /* ScoreCraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347BC382A4F73E200DAE511 /* ScoreCraftUITests.swift */; };
+		7347BC3B2A4F73E200DAE511 /* ScoreCraftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347BC3A2A4F73E200DAE511 /* ScoreCraftUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7347BC2B2A4F73E200DAE511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7347BC122A4F73DF00DAE511 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7347BC192A4F73DF00DAE511;
+			remoteInfo = ScoreCraft;
+		};
+		7347BC352A4F73E200DAE511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7347BC122A4F73DF00DAE511 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7347BC192A4F73DF00DAE511;
+			remoteInfo = ScoreCraft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7347BC1A2A4F73DF00DAE511 /* ScoreCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7347BC1D2A4F73DF00DAE511 /* ScoreCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCraftApp.swift; sourceTree = "<group>"; };
+		7347BC1F2A4F73DF00DAE511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7347BC212A4F73E200DAE511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7347BC242A4F73E200DAE511 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7347BC2A2A4F73E200DAE511 /* ScoreCraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreCraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7347BC2E2A4F73E200DAE511 /* ScoreCraftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCraftTests.swift; sourceTree = "<group>"; };
+		7347BC342A4F73E200DAE511 /* ScoreCraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreCraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7347BC382A4F73E200DAE511 /* ScoreCraftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCraftUITests.swift; sourceTree = "<group>"; };
+		7347BC3A2A4F73E200DAE511 /* ScoreCraftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCraftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7347BC172A4F73DF00DAE511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC272A4F73E200DAE511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC312A4F73E200DAE511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7347BC112A4F73DF00DAE511 = {
+			isa = PBXGroup;
+			children = (
+				7347BC1C2A4F73DF00DAE511 /* ScoreCraft */,
+				7347BC2D2A4F73E200DAE511 /* ScoreCraftTests */,
+				7347BC372A4F73E200DAE511 /* ScoreCraftUITests */,
+				7347BC1B2A4F73DF00DAE511 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7347BC1B2A4F73DF00DAE511 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC1A2A4F73DF00DAE511 /* ScoreCraft.app */,
+				7347BC2A2A4F73E200DAE511 /* ScoreCraftTests.xctest */,
+				7347BC342A4F73E200DAE511 /* ScoreCraftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7347BC1C2A4F73DF00DAE511 /* ScoreCraft */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC482A4F772600DAE511 /* Backend */,
+				7347BC472A4F771A00DAE511 /* Frontend */,
+			);
+			path = ScoreCraft;
+			sourceTree = "<group>";
+		};
+		7347BC232A4F73E200DAE511 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC242A4F73E200DAE511 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7347BC2D2A4F73E200DAE511 /* ScoreCraftTests */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC2E2A4F73E200DAE511 /* ScoreCraftTests.swift */,
+			);
+			path = ScoreCraftTests;
+			sourceTree = "<group>";
+		};
+		7347BC372A4F73E200DAE511 /* ScoreCraftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC382A4F73E200DAE511 /* ScoreCraftUITests.swift */,
+				7347BC3A2A4F73E200DAE511 /* ScoreCraftUITestsLaunchTests.swift */,
+			);
+			path = ScoreCraftUITests;
+			sourceTree = "<group>";
+		};
+		7347BC472A4F771A00DAE511 /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC1D2A4F73DF00DAE511 /* ScoreCraftApp.swift */,
+				7347BC1F2A4F73DF00DAE511 /* ContentView.swift */,
+				7347BC212A4F73E200DAE511 /* Assets.xcassets */,
+				7347BC232A4F73E200DAE511 /* Preview Content */,
+				7347BC4D2A4F775400DAE511 /* UI Elements */,
+				7347BC4C2A4F774C00DAE511 /* Networking */,
+				7347BC4B2A4F774500DAE511 /* Services */,
+				7347BC4A2A4F773C00DAE511 /* View Models */,
+				7347BC492A4F772D00DAE511 /* Views */,
+			);
+			path = Frontend;
+			sourceTree = "<group>";
+		};
+		7347BC482A4F772600DAE511 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				7347BC532A4F779100DAE511 /* Business Logic */,
+				7347BC522A4F778700DAE511 /* Authentication */,
+				7347BC512A4F777900DAE511 /* Routes */,
+				7347BC502A4F777300DAE511 /* Models */,
+				7347BC4F2A4F776C00DAE511 /* Database */,
+				7347BC4E2A4F776300DAE511 /* API Endpoints */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		7347BC492A4F772D00DAE511 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7347BC4A2A4F773C00DAE511 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		7347BC4B2A4F774500DAE511 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7347BC4C2A4F774C00DAE511 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7347BC4D2A4F775400DAE511 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		7347BC4E2A4F776300DAE511 /* API Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Endpoints";
+			sourceTree = "<group>";
+		};
+		7347BC4F2A4F776C00DAE511 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		7347BC502A4F777300DAE511 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7347BC512A4F777900DAE511 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		7347BC522A4F778700DAE511 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7347BC532A4F779100DAE511 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7347BC192A4F73DF00DAE511 /* ScoreCraft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7347BC3E2A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraft" */;
+			buildPhases = (
+				7347BC162A4F73DF00DAE511 /* Sources */,
+				7347BC172A4F73DF00DAE511 /* Frameworks */,
+				7347BC182A4F73DF00DAE511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScoreCraft;
+			productName = ScoreCraft;
+			productReference = 7347BC1A2A4F73DF00DAE511 /* ScoreCraft.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7347BC292A4F73E200DAE511 /* ScoreCraftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7347BC412A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraftTests" */;
+			buildPhases = (
+				7347BC262A4F73E200DAE511 /* Sources */,
+				7347BC272A4F73E200DAE511 /* Frameworks */,
+				7347BC282A4F73E200DAE511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7347BC2C2A4F73E200DAE511 /* PBXTargetDependency */,
+			);
+			name = ScoreCraftTests;
+			productName = ScoreCraftTests;
+			productReference = 7347BC2A2A4F73E200DAE511 /* ScoreCraftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7347BC332A4F73E200DAE511 /* ScoreCraftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7347BC442A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraftUITests" */;
+			buildPhases = (
+				7347BC302A4F73E200DAE511 /* Sources */,
+				7347BC312A4F73E200DAE511 /* Frameworks */,
+				7347BC322A4F73E200DAE511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7347BC362A4F73E200DAE511 /* PBXTargetDependency */,
+			);
+			name = ScoreCraftUITests;
+			productName = ScoreCraftUITests;
+			productReference = 7347BC342A4F73E200DAE511 /* ScoreCraftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7347BC122A4F73DF00DAE511 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7347BC192A4F73DF00DAE511 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					7347BC292A4F73E200DAE511 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7347BC192A4F73DF00DAE511;
+					};
+					7347BC332A4F73E200DAE511 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7347BC192A4F73DF00DAE511;
+					};
+				};
+			};
+			buildConfigurationList = 7347BC152A4F73DF00DAE511 /* Build configuration list for PBXProject "ScoreCraft" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7347BC112A4F73DF00DAE511;
+			productRefGroup = 7347BC1B2A4F73DF00DAE511 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7347BC192A4F73DF00DAE511 /* ScoreCraft */,
+				7347BC292A4F73E200DAE511 /* ScoreCraftTests */,
+				7347BC332A4F73E200DAE511 /* ScoreCraftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7347BC182A4F73DF00DAE511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347BC252A4F73E200DAE511 /* Preview Assets.xcassets in Resources */,
+				7347BC222A4F73E200DAE511 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC282A4F73E200DAE511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC322A4F73E200DAE511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7347BC162A4F73DF00DAE511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347BC202A4F73DF00DAE511 /* ContentView.swift in Sources */,
+				7347BC1E2A4F73DF00DAE511 /* ScoreCraftApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC262A4F73E200DAE511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347BC2F2A4F73E200DAE511 /* ScoreCraftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7347BC302A4F73E200DAE511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347BC3B2A4F73E200DAE511 /* ScoreCraftUITestsLaunchTests.swift in Sources */,
+				7347BC392A4F73E200DAE511 /* ScoreCraftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7347BC2C2A4F73E200DAE511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7347BC192A4F73DF00DAE511 /* ScoreCraft */;
+			targetProxy = 7347BC2B2A4F73E200DAE511 /* PBXContainerItemProxy */;
+		};
+		7347BC362A4F73E200DAE511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7347BC192A4F73DF00DAE511 /* ScoreCraft */;
+			targetProxy = 7347BC352A4F73E200DAE511 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7347BC3C2A4F73E200DAE511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7347BC3D2A4F73E200DAE511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7347BC3F2A4F73E200DAE511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScoreCraft/Frontend/Preview Content\"";
+				DEVELOPMENT_TEAM = K8965877YG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7347BC402A4F73E200DAE511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScoreCraft/Frontend/Preview Content\"";
+				DEVELOPMENT_TEAM = K8965877YG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7347BC422A4F73E200DAE511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8965877YG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreCraft.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoreCraft";
+			};
+			name = Debug;
+		};
+		7347BC432A4F73E200DAE511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8965877YG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreCraft.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoreCraft";
+			};
+			name = Release;
+		};
+		7347BC452A4F73E200DAE511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8965877YG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScoreCraft;
+			};
+			name = Debug;
+		};
+		7347BC462A4F73E200DAE511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8965877YG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScoreCraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScoreCraft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7347BC152A4F73DF00DAE511 /* Build configuration list for PBXProject "ScoreCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7347BC3C2A4F73E200DAE511 /* Debug */,
+				7347BC3D2A4F73E200DAE511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7347BC3E2A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7347BC3F2A4F73E200DAE511 /* Debug */,
+				7347BC402A4F73E200DAE511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7347BC412A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7347BC422A4F73E200DAE511 /* Debug */,
+				7347BC432A4F73E200DAE511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7347BC442A4F73E200DAE511 /* Build configuration list for PBXNativeTarget "ScoreCraftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7347BC452A4F73E200DAE511 /* Debug */,
+				7347BC462A4F73E200DAE511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7347BC122A4F73DF00DAE511 /* Project object */;
+}
