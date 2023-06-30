@@ -4,6 +4,8 @@ struct ContentView: View {
     // State variables to track the current state of the score creation process
     @State private var isCreatingScore = false
     @State private var isSelectingGeneral = false
+    @State private var isGeneralOptionsExpanded = false
+    @State private var isOtherOptionsExpanded = true
     
     // Score information fields
     @State private var title = ""
@@ -129,23 +131,55 @@ struct ContentView: View {
     // View for choosing a template
     func chooseTemplatePopup() -> some View {
         VStack {
-            Text("Choose Template")
-                .font(.title)
-                .padding()
-            
-            // Title for the general options section
-            Text("General Options")
-                .font(.headline)
-                .padding(.top)
-            
-            // Picker to select a general option for the template
-            Picker(selection: $selectedGeneralOption, label: Text("General Options")) {
-                ForEach(generalOptions, id: \.self) { option in
-                    Text(option)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("General Options")
+                        .font(.headline)
+                    Spacer()
+                    Image(systemName: isGeneralOptionsExpanded ? "chevron.up" : "chevron.down")
+                        .font(Font.body.weight(.semibold))
+                        .foregroundColor(.gray)
+                        .rotationEffect(.degrees(isGeneralOptionsExpanded ? 0 : -90))
+                }
+                .padding(.bottom, 8)
+                .onTapGesture {
+                    isGeneralOptionsExpanded.toggle()
+                }
+                
+                if isGeneralOptionsExpanded {
+                    VStack(alignment: .leading, spacing: 8) {
+                        ForEach(generalOptions, id: \.self) { option in
+                            Text(option)
+                                .font(.body)
+                        }
+                    }
+                    .padding(.leading, 16)
                 }
             }
-            .pickerStyle(.wheel)
             .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            
+            // Other template options (Choral, Chamber Music, Solo, Jazz, Popular, Band and Percussion, Orchestral)
+            VStack(alignment: .leading) {
+                Text("Other Options")
+                    .font(.headline)
+                    .padding(.bottom, 8)
+                
+                // Replace the buttons with a spreadsheet-like layout
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                    ForEach(0..<6) { _ in
+                        Button(action: {}) {
+                            Text("Option")
+                                .font(.body)
+                                .padding()
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(10)
+                        }
+                    }
+                }
+                .padding(.horizontal)
+            }
             
             HStack {
                 Spacer()
