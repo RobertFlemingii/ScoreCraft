@@ -1,11 +1,15 @@
 import SwiftUI
 
+enum PopupState {
+    case createScore
+    case enterScoreInformation
+    case chooseTemplate
+    case chooseInstruments
+}
+
 struct ContentView: View {
-    // State variables to track the current state of the score creation process
-    @State private var isCreatingScore = false
-    @State private var isSelectingGeneral = false
-    @State private var isGeneralOptionsExpanded = false
-    @State private var isOtherOptionsExpanded = true
+    // State variable to track the current state of the popup
+    @State private var popupState: PopupState = .createScore
     
     // Score information fields
     @State private var title = ""
@@ -19,11 +23,12 @@ struct ContentView: View {
     
     // Available general options for the template
     @State private var generalOptions = ["Choose Instruments", "Treble Clef", "Bass Clef", "Grand Staff"]
+    @State private var woodwinds = ["Piccolo", "Flute", "Recorder", "Oboe", "Bb Clarinet", "Bb Bass Clarinet", "Bassoon", "Soprano Saxophone", "Alto Saxophone", "Tenor Saxophone", "Baritone Saxophone"]
     
     var body: some View {
         VStack {
             Button(action: {
-                isCreatingScore = true
+                popupState = .enterScoreInformation
             }) {
                 Text("Create Score")
             }
@@ -34,20 +39,44 @@ struct ContentView: View {
             }
             .padding()
         }
-        .sheet(isPresented: $isCreatingScore, onDismiss: {
+        .sheet(isPresented: shouldShowPopup(), onDismiss: {
             // Handle actions after the popup is dismissed
         }) {
-            createScorePopup()
+            switch popupState {
+            case .createScore:
+                createScorePopup()
+            case .enterScoreInformation:
+                enterScoreInformationPopup()
+            case .chooseTemplate:
+                chooseTemplatePopup()
+            case .chooseInstruments:
+                chooseInstrumentsPopup()
+            }
         }
+    }
+    
+    // Determine if the popup should be shown based on the current state
+    private func shouldShowPopup() -> Binding<Bool> {
+        return Binding<Bool>(
+            get: {
+                popupState != .createScore
+            },
+            set: { _ in }
+        )
     }
     
     // Main score creation popup view
     func createScorePopup() -> some View {
-        if isSelectingGeneral {
-            return AnyView(chooseTemplatePopup())
-        } else {
-            return AnyView(enterScoreInformationPopup())
+        VStack {
+            if popupState == .enterScoreInformation {
+                enterScoreInformationPopup()
+            } else if popupState == .chooseTemplate {
+                chooseTemplatePopup()
+            } else if popupState == .chooseInstruments {
+                chooseInstrumentsPopup()
+            }
         }
+        .padding()
     }
     
     // View for entering score information
@@ -91,7 +120,7 @@ struct ContentView: View {
                 
                 // Next button to move to the Choose Template tab
                 Button(action: {
-                    isSelectingGeneral = true
+                    popupState = .chooseTemplate
                 }) {
                     Text("Next")
                         .padding()
@@ -114,7 +143,7 @@ struct ContentView: View {
                 
                 // Cancel button to close the popup
                 Button(action: {
-                    isCreatingScore = false
+                    popupState = .createScore
                 }) {
                     Text("Cancel")
                         .padding()
@@ -133,24 +162,32 @@ struct ContentView: View {
         VStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("General Options")
+                    Text("General")
                         .font(.headline)
                     Spacer()
-                    Image(systemName: isGeneralOptionsExpanded ? "chevron.up" : "chevron.down")
+                    Image(systemName: popupState == .chooseTemplate ? "chevron.up" : "chevron.down")
                         .font(Font.body.weight(.semibold))
                         .foregroundColor(.gray)
-                        .rotationEffect(.degrees(isGeneralOptionsExpanded ? 0 : -90))
+                        .rotationEffect(.degrees(popupState == .chooseTemplate ? 0 : -90))
                 }
                 .padding(.bottom, 8)
                 .onTapGesture {
-                    isGeneralOptionsExpanded.toggle()
+                    popupState = popupState == .chooseTemplate ? .enterScoreInformation : .chooseTemplate
                 }
                 
-                if isGeneralOptionsExpanded {
+                if popupState == .chooseTemplate {
                     VStack(alignment: .leading, spacing: 8) {
                         ForEach(generalOptions, id: \.self) { option in
-                            Text(option)
-                                .font(.body)
+                            Button(action: {
+                                if option == "Choose Instruments" {
+                                    popupState = .chooseInstruments // Set popup state to chooseInstruments when "Choose Instruments" is selected
+                                } else {
+                                    // Handle selection of other general options
+                                }
+                            }) {
+                                Text(option)
+                                    .font(.body)
+                            }
                         }
                     }
                     .padding(.leading, 16)
@@ -159,6 +196,7 @@ struct ContentView: View {
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
+            
             
             // Other template options (Choral, Chamber Music, Solo, Jazz, Popular, Band and Percussion, Orchestral)
             VStack(alignment: .leading) {
@@ -186,7 +224,7 @@ struct ContentView: View {
                 
                 // Back button to go back to the Enter Score Information tab
                 Button(action: {
-                    isSelectingGeneral = false
+                    popupState = .enterScoreInformation
                 }) {
                     Text("Back")
                         .padding()
@@ -222,7 +260,98 @@ struct ContentView: View {
                 
                 // Cancel button to close the popup
                 Button(action: {
-                    isCreatingScore = false
+                    popupState = .createScore
+                }) {
+                    Text("Cancel")
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+            }
+        }
+        .padding()
+    }
+    
+    // View for choosing instruments
+    func chooseInstrumentsPopup() -> some View {
+        VStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Woodwinds")
+                        .font(.headline)
+                    Spacer()
+                    Image(systemName: popupState == .chooseInstruments ? "chevron.up" : "chevron.down")
+                        .font(Font.body.weight(.semibold))
+                        .foregroundColor(.gray)
+                        .rotationEffect(.degrees(popupState == .chooseInstruments ? 0 : -90))
+                }
+                .padding(.bottom, 8)
+                .onTapGesture {
+                    popupState = popupState == .chooseInstruments ? .chooseTemplate : .chooseInstruments
+                }
+                
+                if popupState == .chooseInstruments {
+                    VStack(alignment: .leading, spacing: 8) {
+                        ForEach(woodwinds, id: \.self) { instrument in
+                            Button(action: {
+                                // Handle instrument selection
+                            }) {
+                                Text(instrument)
+                                    .font(.body)
+                            }
+                        }
+                    }
+                    .padding(.leading, 16)
+                }
+            }
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            
+            HStack {
+                Spacer()
+                
+                // Back button to go back to the Choose Template tab
+                Button(action: {
+                    popupState = .chooseTemplate
+                }) {
+                    Text("Back")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                Spacer()
+                
+                // Next button (currently disabled)
+                Button(action: {}) {
+                    Text("Next")
+                        .padding()
+                        .background(Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                .disabled(true)
+                
+                // Finish button (currently disabled)
+                Button(action: {}) {
+                    Text("Finish")
+                        .padding()
+                        .background(Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                .disabled(true)
+                
+                // Cancel button to close the popup
+                Button(action: {
+                    popupState = .createScore
                 }) {
                     Text("Cancel")
                         .padding()
