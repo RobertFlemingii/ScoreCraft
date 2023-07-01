@@ -197,7 +197,6 @@ struct ContentView: View {
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
             
-            
             // Other template options (Choral, Chamber Music, Solo, Jazz, Popular, Band and Percussion, Orchestral)
             VStack(alignment: .leading) {
                 Text("Other Options")
@@ -275,44 +274,73 @@ struct ContentView: View {
     }
     
     // View for choosing instruments
+    @State private var isExpanded: Bool = false // Track the expansion state of the suboptions
+    @State private var selectedInstruments: [String] = []
+
     func chooseInstrumentsPopup() -> some View {
-        VStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Woodwinds")
-                        .font(.headline)
-                    Spacer()
-                    Image(systemName: popupState == .chooseInstruments ? "chevron.up" : "chevron.down")
-                        .font(Font.body.weight(.semibold))
-                        .foregroundColor(.gray)
-                        .rotationEffect(.degrees(popupState == .chooseInstruments ? 0 : -90))
+        return VStack(spacing: 0) {
+            HStack {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Instruments")
+                            .font(.headline)
+                        Spacer()
+                        Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                            .font(Font.body.weight(.semibold))
+                            .foregroundColor(.gray)
+                            .rotationEffect(.degrees(isExpanded ? 0 : -90))
+                    }
+                    .padding(.bottom, 8)
+                    .onTapGesture {
+                        isExpanded.toggle() // Toggle the expansion state when tapped
+                    }
+                    
+                    if isExpanded {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(woodwinds, id: \.self) { instrument in
+                                Button(action: {
+                                    selectedInstruments.append(instrument)
+                                }) {
+                                    Text(instrument)
+                                        .font(.body)
+                                }
+                            }
+                        }
+                        .padding(.leading, 16)
+                    }
+                    
+                    Spacer() // Add spacer to push the content to the top
                 }
-                .padding(.bottom, 8)
-                .onTapGesture {
-                    popupState = popupState == .chooseInstruments ? .chooseTemplate : .chooseInstruments
-                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
                 
-                if popupState == .chooseInstruments {
-                    VStack(alignment: .leading, spacing: 8) {
-                        ForEach(woodwinds, id: \.self) { instrument in
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 8) {
+                        Text("Selected Instruments:")
+                            .font(.subheadline)
+                            .bold()
+                        
+                        ForEach(selectedInstruments, id: \.self) { instrument in
                             Button(action: {
-                                // Handle instrument selection
+                                selectedInstruments.removeAll { $0 == instrument }
                             }) {
                                 Text(instrument)
                                     .font(.body)
                             }
                         }
                     }
-                    .padding(.leading, 16)
+                    .padding()
                 }
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+                .frame(maxWidth: .infinity)
             }
-            .padding()
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(10)
+            
+            Spacer()
             
             HStack {
-                Spacer()
-                
                 // Back button to go back to the Choose Template tab
                 Button(action: {
                     popupState = .chooseTemplate
@@ -361,7 +389,11 @@ struct ContentView: View {
                 }
                 .padding()
             }
+            .frame(maxWidth: .infinity)
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal)
         }
-        .padding()
     }
 }
+
