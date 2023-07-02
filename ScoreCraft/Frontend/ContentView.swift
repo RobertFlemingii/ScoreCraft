@@ -150,7 +150,8 @@ struct ContentView: View {
                 content: {
                     VStack(alignment: .leading) {
                         Button(action: {
-                            popupState = .chooseInstruments // Go to choose instruments tab
+                            // Go to Choose Instruments tab
+                            popupState = .chooseInstruments
                         }) {
                             HStack {
                                 Text("Choose Instruments")
@@ -217,69 +218,12 @@ struct ContentView: View {
             )
             .padding(.bottom, 8)
             .font(.headline)
-            
-            Spacer()
-            
-            HStack {
-                // Back button (goes to Score Information tab)
-                Button(action: {
-                    popupState = .createScore // Go back to create score popup
-                }) {
-                    Text("Back")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-                
-                Spacer()
-                
-                // Next button (grayed-out)
-                Button(action: {
-                    // Nothing to do here
-                }) {
-                    Text("Next")
-                        .padding()
-                        .background(Color.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-                .disabled(true)
-                
-                Spacer()
-                
-                // Finish button (grayed-out)
-                Button(action: {
-                    // Nothing to do here
-                }) {
-                    Text("Finish")
-                        .padding()
-                        .background(Color.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-                .disabled(true)
-                
-                // Cancel button (closes the popup)
-                Button(action: {
-                    popupState = .createScore // Go back to create score popup
-                }) {
-                    Text("Cancel")
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-            }
         }
         .padding()
         .background(Color.gray.opacity(0.2))
         .cornerRadius(10)
     }
+
     
     
     // View for choosing instruments
@@ -287,14 +231,13 @@ struct ContentView: View {
         VStack {
             HStack {
                 Button(action: {
-                    withAnimation {
+                    withAnimation(.easeInOut) {
                         toggleDropdownVisibility() // Toggle visibility of the dropdown content
                     }
                 }) {
                     HStack(spacing: 4) {
                         Image(systemName: isDropdownVisible ? "chevron.up" : "chevron.down")
                             .rotationEffect(.degrees(isDropdownVisible ? 0 : -90))
-                            .animation(.easeInOut)
                             .font(.headline)
                         
                         Text("Woodwind")
